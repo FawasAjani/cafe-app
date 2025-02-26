@@ -27,9 +27,9 @@ function Footer() {
                                 <strong>CYBERCAFEX</strong>
                             </span>
                             <div className="address">
-                                Irish Town<br />
-                                Athlone<br />
-                                Westmeath
+                                Eyre Square<br />
+                                Galway<br />
+                            
                             </div>
                         </div>
                     </div>

@@ -39,7 +39,7 @@ function Content() {
                             </div>
                             <div className="col-12 col-sm-6">
                                 <p>
-                                We're excited to introduce our new <strong>'Smart Table Service'</strong> at CyberCafeX in Westmeath! 
+                                We're excited to introduce our new <strong>'Smart Table Service'</strong> at CyberCafeX in Galway! 
                             Simply scan the QR code at your table, explore our <strong>digital menu</strong>, place your order, 
                            and enjoy a seamless dining experience.
                                 </p>
