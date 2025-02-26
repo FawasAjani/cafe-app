@@ -48,7 +48,8 @@ const Contact = () => {
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <iframe
-                                src="https://maps.google.com/maps?q=Main%20Street,%Westmeath&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            //Location-Added Galway
+                                src="https://maps.google.com/maps?q=Main%20Street,%Galway&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                                 frameBorder="0"
                                 style={{ border: 0, width: '100%', height: '400px' }}
                                 allowFullScreen=""
@@ -61,7 +62,7 @@ const Contact = () => {
                             <p>Saturday: 9.00 AM - 11.00 PM</p>
                             <p>Sunday: 9.00 AM - 4.00 PM</p>
                             <h2>Find Us</h2>
-                            <p>CYBERCAFEX, Irish Town, Athlone, Westmeath</p>
+                            <p>CYBERCAFEX, Eyre Square, Galway</p>
                         </div>
                     </div>
                 </div>

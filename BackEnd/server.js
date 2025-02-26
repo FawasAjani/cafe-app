@@ -71,5 +71,6 @@ app.delete('/api/menu/:id', async (req, res) => {
 
 // Server Listening
 app.listen(port, () => {
-    console.log(CyberCafeX API running on port ${port});
+    console.log(`CyberCafeX API running on port ${port}`);
+
 });
