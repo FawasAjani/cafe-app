@@ -83,6 +83,7 @@ function Content() {
                             </p>
                             <h3>Main Dishes</h3>
                             <ul>
+                                
                                 <li><strong>Cyber Wrap</strong> (€2.50) – A light yet satisfying wrap.</li>
                                 <li><strong>Panini Wrap</strong> (€4.50) – Classic meets modern.</li>
                                 <li><strong>Cyber Burger</strong> (€5.50) – Packed with flavor.</li>
@@ -91,12 +92,12 @@ function Content() {
                             <h3>Desserts</h3>
                             <ul>
                                 <li><strong>Neon Cheesecake</strong> (€4.50) – A vibrant treat.</li>
-                                <li><strong>Brownie</strong> (€3.80) – Rich and indulgent.</li>
+                                <li><strong>Brownie</strong> (€3.80) – Rich and tasty.</li>
                             </ul>
                             <h3>Drinks</h3>
                             <ul>
                                 <li><strong>Cyber Coffee</strong> (€2.50 - €2.80) – An unmatched coffee experience.</li>
-                                <li><strong>Energy Boost</strong> (€2.50) – Power-packed for your day.</li>
+                                <li><strong>Energy Boost</strong> (€2.50) – Powerd with elctrolytes.</li>
                             </ul>
                         </div>
                     </div>
@@ -110,7 +111,7 @@ function Content() {
                         <h2>About</h2>
 <p>
     Welcome to <strong>CyberCafeX</strong> — where coffee meets technology in a space designed for both productivity and relaxation. 
-    Located in the heart of Westmeath, we combine the warmth of a traditional café with the convenience and innovation of a digital hub. 
+    Located in the heart of Galway, we combine the warmth of a traditional café with the convenience and innovation of a digital hub. 
     Whether you're here for a quick coffee break, remote work, or socializing with friends, CyberCafeX offers a seamless experience like no other.
 </p>
 <p>
@@ -120,7 +121,7 @@ function Content() {
 </p>
 <p>
     At CyberCafeX, technology enhances every aspect of your visit. From smart table service and contactless ordering to high-speed Wi-Fi and 
-    immersive digital environments, we've reimagined the café experience for the modern world. Our loyalty program rewards you with every 
+     digital environments, we've transformed the café experience for the modern world. Our loyalty program rewards you with every 
     purchase, unlocking exclusive perks and surprises as you collect points through our app.
 </p>
 
