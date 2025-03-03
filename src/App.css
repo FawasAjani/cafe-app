@@ -66,8 +66,8 @@ h2::after {
   transform: scale(1.1);
 }
 
-/* Hero Section */
-.fawas-image {
+/* cyber Section */
+.cyber-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,21 +75,21 @@ h2::after {
   position: relative;
 }
 
-.fawas-text {
+.cyber-text {
   position: absolute;
   top: 200px;
   left: 10%;
   color: #fafafa;
 }
 
-#fawas-h1 {
+#cyber-h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 50px;
   font-weight: 700;
   color: #00ffff;
 }
 
-#fawas-h2 {
+#cyber-h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 25px;
@@ -97,7 +97,7 @@ h2::after {
   color: #ff00ff;
 }
 
-#fawas-button {
+#cyber-button {
   font-family: 'Orbitron', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -110,7 +110,7 @@ h2::after {
   transition: all 0.3s ease;
 }
 
-#fawas-button:hover {
+#cyber-button:hover {
   background-color: #ff00ff;
   color: #000000;
   transform: scale(1.1);
