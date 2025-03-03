@@ -13,6 +13,7 @@ import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
 import Logo from './images/cyber1logo.png';
+import Menu from "./components/menu"; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                 <Nav.Link href="/create">Order</Nav.Link>
                 <Nav.Link href="/read">CyberCafeX</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
+                <Nav.Link href="/menu">Menu</Nav.Link>
                 <Nav.Link href="/review">Review</Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -51,8 +53,10 @@ function App() {
           <Route path='/read' element={<Read />} />
           <Route path='/create' element={<Create />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/menu' element={<Menu />} />
           <Route path='/edit/:id' element={<Edit />} />
           <Route path='/review' element={<Review />} />
+          
         </Routes>
 
         {/* Footer */}

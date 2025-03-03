@@ -48,7 +48,7 @@ function Create() {
         <section className="custom-section form-section">
             <div className="container">
                 <div className="row">
-                    <h2>Add a New Menu Item</h2>
+                    <h2>Order Item</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="row contact-form-text">
                             {/* Input for item name */}
