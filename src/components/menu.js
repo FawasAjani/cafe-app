@@ -15,7 +15,7 @@ function Menu() {
     };
 
     const resetMenu = () => {
-        axios.delete("http://localhost:4000/api/menu/reset")
+        axios.delete("http://localhost:4000/api/menu/reset")//reset 
             .then(() => {
                 setMenuItems([]);
             })
@@ -42,11 +42,11 @@ function Menu() {
                             <div key={item._id} className="col-md-4 mb-4">
                                 <div className="card">
                                     <img 
-                                        src={item.imageUrl}  // ✅ Using URL instead of local path
+                                        src={item.imageUrl}  // using a url instead of a local pathh
                                         className="card-img-top" 
                                         alt={item.name} 
                                         style={{ height: '200px', objectFit: 'cover' }} 
-                                        onError={(e) => { e.target.src = "https://via.placeholder.com/200"; }} 
+                                        onError={(e) => { e.target.src = "https://via.placeholder.com/200"; }} //placeholdder
                                     />
                                     <div className="card-body">
                                         <h5 className="card-title">{item.name}</h5>
