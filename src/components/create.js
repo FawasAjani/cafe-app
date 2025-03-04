@@ -1,46 +1,40 @@
-// FawasAjani-G00413222
 import { useState } from "react";
 import axios from "axios";
 
 function Create() {
-    // useState hooks for managing the form fields and the submission message
-    const [itemName, setItemName] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
+    const [itemName, setItemName] = useState('');//item eg. chips
+    const [imageUrl, setImageUrl] = useState(''); //image url
     const [description, setDescription] = useState('');
-    const [category, setCategory] = useState(''); // Main Dish, Dessert, or Drink
+    const [category, setCategory] = useState('');
     const [price, setPrice] = useState('');
-    const [message, setMessage] = useState(''); // State for success or error message
+    const [message, setMessage] = useState('');
 
-    // Function to handle the form submission
+    const resetForm = () => {
+        setItemName('');
+        setImageUrl('');
+        setDescription('');
+        setCategory('');
+        setPrice('');
+    };
+
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevents the default form submission behavior
+        e.preventDefault();
 
-        // Construct the new menu item object
         const newMenuItem = {
             name: itemName,
-            imageUrl: imageUrl,
+            imageUrl: imageUrl, //url is working
             description: description,
-            category: category, // Main Dish, Dessert, or Drink
+            category: category,
             price: price
         };
 
-        // Function to reset the form fields back to initial state
-        const resetForm = () => {
-            setItemName('');
-            setImageUrl('');
-            setDescription('');
-            setCategory('');
-            setPrice('');
-        };
-
-        // Making a POST request to the server to add the new menu item
         axios.post('http://localhost:4000/api/menu', newMenuItem)
         .then(() => {
-            resetForm(); // Reset the form fields on successful submission
-            setMessage('Menu item successfully added!'); // Success message
+            resetForm();
+            setMessage('Menu item successfully added!');
         })
         .catch((error) => {
-            setMessage('An error occurred: ' + error.message); // Error message
+            setMessage('An error occurred: ' + error.message);
         });
     };
 
@@ -48,12 +42,11 @@ function Create() {
         <section className="custom-section form-section">
             <div className="container">
                 <div className="row">
-                    <h2>Order Item</h2>
+                    <h2>Add New Menu Item</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="row contact-form-text">
-                            {/* Input for item name */}
                             <div className="col-12 col-sm-6">
-                                <label htmlFor="item-name" className="contact-form-text">Item Name:</label>
+                                <label htmlFor="item-name">Item Name:</label>
                                 <input
                                     type="text"
                                     className="form-control"
@@ -63,21 +56,20 @@ function Create() {
                                     required
                                 />
                             </div>
-                            {/* Input for item image URL */}
                             <div className="col-12 col-sm-6">
-                                <label htmlFor="item-image-url" className="contact-form-text">Image URL:</label>
+                                <label htmlFor="item-image-url">Image URL:</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="item-image-url"
+                                    placeholder="https://example.com/image.jpg"
                                     value={imageUrl}
                                     onChange={(e) => setImageUrl(e.target.value)}
                                     required
                                 />
                             </div>
-                            {/* Textarea for item description */}
                             <div className="col-12">
-                                <label htmlFor="item-description" className="contact-form-text">Description:</label>
+                                <label htmlFor="item-description">Description:</label>
                                 <textarea
                                     className="form-control"
                                     id="item-description"
@@ -87,9 +79,8 @@ function Create() {
                                     required
                                 />
                             </div>
-                            {/* Dropdown for selecting category */}
                             <div className="col-12 col-sm-6">
-                                <label htmlFor="category" className="contact-form-text">Category:</label>
+                                <label htmlFor="category">Category:</label>
                                 <select
                                     className="form-control"
                                     id="category"
@@ -103,9 +94,8 @@ function Create() {
                                     <option value="Drink">Drink</option>
                                 </select>
                             </div>
-                            {/* Input for item price */}
                             <div className="col-12 col-sm-6">
-                                <label htmlFor="price" className="contact-form-text">Price (€):</label>
+                                <label htmlFor="price">Price (€):</label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -115,13 +105,11 @@ function Create() {
                                     required
                                 />
                             </div>
-                            {/* Submit button */}
                             <div className="col-12">
-                                <button type="submit" className="btn btn-light float-right" id="contact-btn-form">
+                                <button type="submit" className="btn btn-light float-right">
                                     Add Item
                                 </button>
                             </div>
-                            {/* Display success or error messages */}
                             <div className="col-12">
                                 {message && <p className={message.includes('error') ? 'error-message' : 'success-message'}>{message}</p>}
                             </div>

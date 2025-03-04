@@ -1,11 +1,10 @@
-
-
 const express = require('express');
-const app = express();
-const port = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
+const app = express();
+const port = 4000;
 
 // Middleware
 app.use(cors());
@@ -22,7 +21,7 @@ main().catch(err => console.log(err));
 // Schema and Model
 const menuSchema = new mongoose.Schema({
     name: String,
-    imageUrl: String,
+    imageUrl: String, // ✅ Using image URL now
     description: String,
     category: String,
     price: Number
@@ -49,7 +48,13 @@ app.get('/api/menu/:id', async (req, res) => {
 // Create New Menu Item
 app.post('/api/menu', async (req, res) => {
     try {
-        const newItem = new Menu(req.body);
+        const newItem = new Menu({
+            name: req.body.name,
+            imageUrl: req.body.imageUrl,  // ✅ Now using direct URL links
+            description: req.body.description,
+            category: req.body.category,
+            price: req.body.price
+        });
         await newItem.save();
         res.status(201).json({ message: 'Menu item added successfully!' });
     } catch (err) {
@@ -57,20 +62,13 @@ app.post('/api/menu', async (req, res) => {
     }
 });
 
-// Update Menu Item by ID
-app.put('/api/menu/:id', async (req, res) => {
-    const updatedItem = await Menu.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.json(updatedItem);
-});
-
-// Delete Menu Item by ID
-app.delete('/api/menu/:id', async (req, res) => {
-    await Menu.findByIdAndDelete(req.params.id);
-    res.json({ message: 'Menu item deleted successfully!' });
+// Delete all menu items (for resetting the menu)
+app.delete('/api/menu/reset', async (req, res) => {
+    await Menu.deleteMany({});
+    res.json({ message: 'Menu has been reset!' });
 });
 
 // Server Listening
 app.listen(port, () => {
     console.log(`CyberCafeX API running on port ${port}`);
-
 });

@@ -39,8 +39,8 @@ function App() {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/create">Order</Nav.Link>
                 <Nav.Link href="/read">CyberCafeX</Nav.Link>
+                <Nav.Link href="/menu">order placed</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
-                <Nav.Link href="/menu">Menu</Nav.Link>
                 <Nav.Link href="/review">Review</Nav.Link>
               </Nav>
             </Navbar.Collapse>
