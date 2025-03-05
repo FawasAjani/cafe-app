@@ -1,17 +1,17 @@
 import axios from "axios";
-import Cafe from './cafe';
+import Menu from './menu';
 import { useEffect, useState } from "react";
 /*Fawas-Ajani-G00413222 */
 function Read() {
-    // State to store the coffee data
+    // State to store the menu data
     const [data, setData] = useState([]);
 
-    // Function to fetch coffee data from the API
+    // Function to fetch menudata from the API
     const fetchData = () => {
-        axios.get('http://localhost:4000/api/cafe')
+        axios.get('http://localhost:4000/api/menu')
             .then((response) => {
                 // Set the fetched data in the state
-                setData(response.data.myCafe);
+                setData(response.data.myMenu);
             })
             .catch((error) => {
                 console.log(error);
@@ -25,8 +25,8 @@ function Read() {
 
     return (
         <div>
-            {/* Pass the coffee data to the Coffees component */}
-            <Cafe myCafe={data} setMyCafe={setData} ReloadData={fetchData}></Cafe>
+           
+            <Menu myMenu={data} setMyMenu={setData} ReloadData={fetchData}></Menu>
         </div>
     );
 }
