@@ -50,7 +50,7 @@ app.post('/api/menu', async (req, res) => {
     try {
         const newItem = new Menu({
             name: req.body.name,
-            imageUrl: req.body.imageUrl,  // ✅ Now using direct URL links
+            imageUrl: req.body.imageUrl,  // 
             description: req.body.description,
             category: req.body.category,
             price: req.body.price
