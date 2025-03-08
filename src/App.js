@@ -1,4 +1,4 @@
-// FawasAjani-G00413222
+// FawasAjani-G00413222 - App.js
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Content from './components/content';
@@ -14,8 +14,9 @@ import Contact from './components/contact';
 import Review from './components/review';
 import Logo from './images/cyber1logo.png';
 import Menu from "./components/menu"; 
+import Login from "./components/login"; // ✅ Import Login Page
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Login from "./components/login";
+
 function App() {
   return (
     <BrowserRouter>
@@ -35,28 +36,28 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-                {/* Navigation Links */}
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/create">Order</Nav.Link>
                 <Nav.Link href="/read">CyberCafeX</Nav.Link>
-                <Nav.Link href="/menu">order placed</Nav.Link>
+                <Nav.Link href="/menu">Order Placed</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
                 <Nav.Link href="/review">Review</Nav.Link>
-              </Nav>
+                <Nav.Link href="/login">Login</Nav.Link> 
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
         {/* Define Routes */}
         <Routes>
-          <Route path='/' element={<Content />} />
-          <Route path='/read' element={<Read />} />
-          <Route path='/create' element={<Create />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/menu' element={<Menu />} />
-          <Route path='/edit/:id' element={<Edit />} />
-          <Route path='/review' element={<Review />} />
-          
+          <Route path="/" element={<Content />} />
+          <Route path="/read" element={<Read />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/review" element={<Review />} />
+          {/* Added Login Route */}
+          <Route path="/login" element={<Login />} /> 
         </Routes>
 
         {/* Footer */}
@@ -67,4 +68,3 @@ function App() {
 }
 
 export default App;
-
