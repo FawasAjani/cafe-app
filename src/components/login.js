@@ -58,3 +58,14 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
+                    </div>
+                {error && <p className="error-message">{error}</p>}
+                <button type="submit" className="btn btn-primary" disabled={loading}>
+                    {loading ? "Logging in..." : "Login"}
+                </button>
+            </form>
+        </div>
+    );
+}
+
+export default Login;
