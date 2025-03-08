@@ -34,3 +34,10 @@ function Login() {
 
         setLoading(false);
     };
+    
+    return (
+        <div className="login-container">
+            <h2>Login to CyberCafeX</h2>
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label>Email:</label>
