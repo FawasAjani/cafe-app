@@ -6,20 +6,20 @@ import Footer from './components/footer';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Create from './components/create';
 import Read from './components/read';
 import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
 import Logo from './images/cyber1logo.png';
-import Menu from "./components/menu"; 
-import Login from "./components/login"; // ✅ Import Login Page
+import Menu from "./components/menu";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         {/* Navbar */}
         <Navbar bg="light" variant="light" expand="lg" className="px-3">
@@ -42,7 +42,8 @@ function App() {
                 <Nav.Link href="/menu">Order Placed</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
                 <Nav.Link href="/review">Review</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link> 
+                <Nav.Link href="/login">Login</Nav.Link>
+              </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -56,14 +57,12 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/review" element={<Review />} />
-          {/* Added Login Route */}
-          <Route path="/login" element={<Login />} /> 
         </Routes>
 
         {/* Footer */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
