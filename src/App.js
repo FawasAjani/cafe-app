@@ -6,7 +6,7 @@ import Footer from './components/footer';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Create from './components/create';
+import Create from './components/order';
 import Read from './components/read';
 import Edit from './components/edit';
 import Contact from './components/contact';
@@ -42,8 +42,7 @@ function App() {
                 <Nav.Link href="/menu">Order Placed</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
                 <Nav.Link href="/review">Review</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link>
-              </Nav>
+                </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
