@@ -41,4 +41,8 @@ function Payment({ basket, clearBasket }) {
                         <label>Expiry Date</label>
                         <input type="text" className="form-control" value={expiry} onChange={(e) => setExpiry(e.target.value)} required />
                     </div>
+                    <div className="form-group">
+                        <label>CVV</label>
+                        <input type="text" className="form-control" value={cvv} onChange={(e) => setCvv(e.target.value)} required />
+                    </div>
         
