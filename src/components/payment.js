@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-//function for payment.js
 function Payment({ basket, clearBasket }) {
     const [cardNumber, setCardNumber] = useState("");
     const [expiry, setExpiry] = useState("");
@@ -15,17 +14,17 @@ function Payment({ basket, clearBasket }) {
         e.preventDefault();
 
         if (!cardNumber || !expiry || !cvv) {
-            setMessage(" Please fill in all payment details!");//payment details
+            setMessage("❌ Please fill in all payment details!");
             return;
         }
 
-        setMessage(" Payment Successful! Thank you for your order.");//If the payment is sucessfull it's going to read this message
+        setMessage("✅ Payment Successful! Thank you for your order.");
         setTimeout(() => {
             clearBasket();
             navigate("/");
         }, 3000);
     };
-//handle payment method
+
     return (
         <section className="custom-section">
             <div className="container">
@@ -36,7 +35,7 @@ function Payment({ basket, clearBasket }) {
                     <div className="form-group">
                         <label>Card Number</label>
                         <input type="text" className="form-control" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} required />
-                    </div></form>
+                    </div>
                     <div className="form-group">
                         <label>Expiry Date</label>
                         <input type="text" className="form-control" value={expiry} onChange={(e) => setExpiry(e.target.value)} required />
@@ -45,4 +44,11 @@ function Payment({ basket, clearBasket }) {
                         <label>CVV</label>
                         <input type="text" className="form-control" value={cvv} onChange={(e) => setCvv(e.target.value)} required />
                     </div>
-        
+                    <button type="submit" className="btn btn-success mt-3">Complete Payment</button>
+                </form>
+            </div>
+        </section>
+    );
+}
+
+export default Payment;
