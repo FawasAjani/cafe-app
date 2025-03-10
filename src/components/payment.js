@@ -18,3 +18,12 @@ function Payment({ basket, clearBasket }) {
             setMessage(" Please fill in all payment details!");//payment details
             return;
         }
+
+        setMessage(" Payment Successful! Thank you for your order.");//If the payment is sucessfull it's going to read this message
+        setTimeout(() => {
+            clearBasket();
+            navigate("/");
+        }, 3000);
+    };
+        
+        
