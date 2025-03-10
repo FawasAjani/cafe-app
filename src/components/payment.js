@@ -25,5 +25,17 @@ function Payment({ basket, clearBasket }) {
             navigate("/");
         }, 3000);
     };
+//handle payment method
+    return (
+        <section className="custom-section">
+            <div className="container">
+                <h2>Payment</h2>
+                <p>Total Amount: <strong>€{totalPrice.toFixed(2)}</strong></p>
+                {message && <p className="mt-2">{message}</p>}
+                <form onSubmit={handlePayment}>
+                    <div className="form-group">
+                        <label>Card Number</label>
+                        <input type="text" className="form-control" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} required />
+                    </div>
         
         
