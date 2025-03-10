@@ -36,6 +36,9 @@ function Payment({ basket, clearBasket }) {
                     <div className="form-group">
                         <label>Card Number</label>
                         <input type="text" className="form-control" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} required />
+                    </div></form>
+                    <div className="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" className="form-control" value={expiry} onChange={(e) => setExpiry(e.target.value)} required />
                     </div>
-        
         
