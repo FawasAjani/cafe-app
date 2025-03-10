@@ -6,7 +6,9 @@ import Footer from './components/footer';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Create from './components/order';
+import Order from './components/order';
+import Basket from './components/basket';
+import Payment from './components/payment';
 import Read from './components/read';
 import Edit from './components/edit';
 import Contact from './components/contact';
@@ -38,6 +40,8 @@ function App() {
               <Nav className="ms-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/create">Order</Nav.Link>
+                <Nav.Link href="/create">basket</Nav.Link>
+                <Nav.Link href="/payment">payment</Nav.Link>
                 <Nav.Link href="/read">CyberCafeX</Nav.Link>
                 <Nav.Link href="/menu">Order Placed</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
@@ -51,7 +55,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/read" element={<Read />} />
-          <Route path="/create" element={<Create />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/basket" element={<Basket/>} />
+          <Route path="/payment" element={<Payment/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/edit/:id" element={<Edit />} />

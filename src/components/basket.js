@@ -24,7 +24,7 @@ function Basket({ basket, removeFromBasket }) {
 
 </ul>                  
                         <h4>Total: €{totalPrice.toFixed(2)}</h4>
-                        
+                
                         <button className="btn btn-primary mt-3" onClick={() => navigate("/payment")}>Proceed to Payment</button>{}
                     </>
                 )}
