@@ -12,3 +12,12 @@ function Basket({ basket, removeFromBasket }) {
                 {basket.length === 0 ? (
                     <p>Your basket is empty.</p>
                 ) : (
+
+                    <>
+                    <ul className="list-group">
+                        {basket.map((item, index) => (
+                            <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+                                {item.name} - €{item.price.toFixed(2)}
+                                <button className="btn btn-danger btn-sm" onClick={() => removeFromBasket(index)}>Remove</button>
+                            </li>
+                        ))}
