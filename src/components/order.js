@@ -8,6 +8,7 @@ import almondsImage from '../images/almonds.jpg';
 import maccheeseImage from '../images/Ajani mac&cheese.jpg';
 import burgerImage from '../images/burger.jpg';
 import chickenwingsImage from '../images/chickenwings.jpg';
+import chickenliverportugueserollImage from '../images/chicken-liverportugueseroll.jpg';
 import "bootstrap/dist/css/bootstrap.min.css";
 //Food iteams
 const foodItems = [
@@ -19,6 +20,7 @@ const foodItems = [
     { id: 6, category: "Starters", name: "Ajani mac&cheese", price: 12.00, image: maccheeseImage  },
     { id: 7, category: "Main Dishes" ,name: "Classic Burger", price: 20.99, image: burgerImage },
     { id: 8, category: "Main Dishes", name: "3 chicken wings", price: 24.00, image: chickenwingsImage  },
+    { id: 9, category: "Main Dishes", name: "chicken & liverportugueseroll", price: 30.00, image:chickenliverportugueserollImage },
     
     { id: 10, category: "Desserts", name: "Chocolate Brownie", price: 4.99, image: "brownie.jpg" },
     { id: 11, category: "Desserts", name: "Ice Cream Sundae", price: 5.49, image: "ice_cream.jpg" },
