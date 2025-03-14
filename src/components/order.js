@@ -56,6 +56,11 @@ function Order({ basket, setBasket }) {
         setBasket(prevBasket => [...prevBasket, item]);
         console.log("Basket updated:", basket);  
     };
+    //useeffect 
+    useEffect(() => {
+        console.log("Updated Basket:", basket);//updated basket
+    }, [basket]);
+
 
     return (
         <div className="container mt-4">
