@@ -1,4 +1,3 @@
-// FawasAjani-G00413222 - App.js
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
@@ -22,6 +21,21 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
   const [basket, setBasket] = useState([]); // ✅ Store basket globally
 
+  // ✅ Add item to basket
+  const addToBasket = (item) => {
+    setBasket((prevBasket) => [...prevBasket, item]);
+  };
+
+  // ✅ Remove item from basket
+  const removeFromBasket = (index) => {
+    setBasket((prevBasket) => prevBasket.filter((_, i) => i !== index));
+  };
+
+  // ✅ Clear basket after successful payment
+  const clearBasket = () => {
+    setBasket([]);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -29,13 +43,7 @@ function App() {
         <Navbar bg="light" variant="light" expand="lg" className="px-3">
           <Container>
             <Navbar.Brand href="/">
-              <img
-                src={Logo}
-                width="auto"
-                height="30"
-                className="d-inline-block align-top"
-                alt="CyberCafeX Logo"
-              />
+              <img src={Logo} width="auto" height="30" className="d-inline-block align-top" alt="CyberCafeX Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -57,9 +65,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/read" element={<Read />} />
-          <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} />
-          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
-          <Route path="/payment" element={<Payment basket={basket} setBasket={setBasket} />} />
+          <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} /> {/* ✅ Pass setBasket */}
+          <Route path="/basket" element={<Basket basket={basket} removeFromBasket={removeFromBasket} />} />
+          <Route path="/payment" element={<Payment basket={basket} clearBasket={clearBasket} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/edit/:id" element={<Edit />} />

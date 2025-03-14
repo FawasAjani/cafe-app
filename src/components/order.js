@@ -20,6 +20,7 @@ import chocolateicecreamImage from '../images/chocolate-ice-cream.jpg';
 import waterImage from '../images/water.jpg';
 import sparklingwaterImage from '../images/sparkling-water.jpg';
 import fantaImage from '../images/fanta.jpg';
+import { useEffect } from 'react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -43,9 +44,9 @@ const foodItems = [
     { id: 17, category: "Desserts", name: "Chocolate-cake", price: 12.00, image: chocolatecakeImage },
     { id: 18, category: "Desserts", name: "Cheese-cake", price: 7.00, image: cheesecakeImage },
     { id: 19, category: "Desserts", name: "Chocolate-ice-cream", price: 14.40, image: chocolateicecreamImage },
-    { id: 19, category: "Drinks", name: "Water", price: 3.00, image:waterImage },
-    { id: 19, category: "Drinks", name: "Sparkling-water", price: 3.50, image: sparklingwaterImage },
-    { id: 19, category: "Drinks", name: "Fanta", price: 4.00, image: fantaImage },
+    { id: 20, category: "Drinks", name: "Water", price: 3.00, image:waterImage },
+    { id: 21, category: "Drinks", name: "Sparkling-water", price: 3.50, image: sparklingwaterImage },
+    { id: 22, category: "Drinks", name: "Fanta", price: 4.00, image: fantaImage },
 ];
 
 
