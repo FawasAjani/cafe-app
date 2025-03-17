@@ -28,7 +28,7 @@ function Payment({ basket, clearBasket }) {
         }
 
         // Payment successful
-        setMessage("✅ Payment Successful! Thank you for your order.");
+        setMessage(" Payment Successful! Thank you for your order.");
         setCardNumber("");//setcardnumber
         setExpiry("");//set expiry
         setCvv("");//setCvv
