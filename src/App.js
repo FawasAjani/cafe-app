@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Content from './components/content';
 import Footer from './components/footer';
@@ -14,27 +14,21 @@ import Read from './components/read';
 import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
-import Menu from "./components/menu";
+import Menu from './components/menu';
 import Logo from './images/cyber1logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  const [basket, setBasket] = useState([]); // ✅ Store basket globally
+  // ✅ Load basket from localStorage when app starts
+  const [basket, setBasket] = useState(() => {
+    const savedBasket = localStorage.getItem("basket");
+    return savedBasket ? JSON.parse(savedBasket) : [];
+  });
 
-  // ✅ Add item to basket
-  const addToBasket = (item) => {
-    setBasket((prevBasket) => [...prevBasket, item]);
-  };
-
-  // ✅ Remove item from basket
-  const removeFromBasket = (index) => {
-    setBasket((prevBasket) => prevBasket.filter((_, i) => i !== index));
-  };
-
-  // ✅ Clear basket after successful payment
-  const clearBasket = () => {
-    setBasket([]);
-  };
+  // ✅ Save basket to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+  }, [basket]);
 
   return (
     <Router>
@@ -61,13 +55,13 @@ function App() {
           </Container>
         </Navbar>
 
-        {/* Define Routes */}
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/read" element={<Read />} />
-          <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} /> {/* ✅ Pass setBasket */}
-          <Route path="/basket" element={<Basket basket={basket} removeFromBasket={removeFromBasket} />} />
-          <Route path="/payment" element={<Payment basket={basket} clearBasket={clearBasket} />} />
+          <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} />
+          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
+          <Route path="/payment" element={<Payment basket={basket} setBasket={setBasket} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/edit/:id" element={<Edit />} />
