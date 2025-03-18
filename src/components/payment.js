@@ -48,7 +48,7 @@ function Payment({ basket, clearBasket }) {
         setCvv("");//setCvv
         setAddress("");//setAddress
         setCity("");//SetCity
-        setZipCode("");
+        setZipCode("");//setZip
         setCountry("");
 
         setTimeout(() => {
@@ -66,7 +66,7 @@ function Payment({ basket, clearBasket }) {
                 {message && <div className={`alert ${message.includes("❌") ? "alert-danger" : "alert-success"}`} role="alert">{message}</div>}
 
                 <form onSubmit={handlePayment}>
-                    {/* ✅ Address  */}
+                    {/* Address  */}
                     <div className="form-group mb-3">
                         <label>Street Address</label>
                         <input type="text" className="form-control" placeholder="Enter your street address" value={address}
@@ -88,7 +88,7 @@ function Payment({ basket, clearBasket }) {
                             onChange={(e) => setCountry(e.target.value)} required />
                     </div>
 
-                    {/* ✅ Payment  */}
+                    {/*  Payment  */}
                     <div className="form-group mb-3">
                         <label>Card Number</label>
                         <input type="text" className="form-control" placeholder="Enter 16-digit card number" value={cardNumber}
