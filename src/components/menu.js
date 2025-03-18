@@ -32,7 +32,7 @@ function Menu() {
         <section className="custom-section">
             <div className="container">
                 <h2>CyberCafeX Menu</h2>
-                <button onClick={resetMenu} className="btn btn-danger">Reset Menu</button>
+                <button onClick={resetMenu} className="btn btn-danger"></button>
 
                 {menuItems.length === 0 ? (
                     <p>No menu items available</p>

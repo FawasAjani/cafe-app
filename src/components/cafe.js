@@ -10,7 +10,7 @@ import humanImage from '../images/human.jpg';
 import robotImage from '../images/robot.jpg';
 import { Link } from 'react-router-dom';
 
-function Content() {
+function Home() {
     return (
         <div>
             <section style={{ backgroundImage: `url(${CybercafexImage})` }} className="Cybercafex-image container-fluid">
@@ -146,4 +146,4 @@ function Content() {
     );
 }
 
-export default Content;
+export default Home;

@@ -2,15 +2,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Content from './components/content';
 import Footer from './components/footer';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Home from './components/home';
 import Order from './components/order';
 import Basket from './components/basket';
 import Payment from './components/payment';
-import Read from './components/read';
 import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
@@ -19,18 +18,18 @@ import Logo from './images/cyber1logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  //  Load basket from localStorage when app starts
+  // Load basket from localStorage when app starts
   const [basket, setBasket] = useState(() => {
     const savedBasket = localStorage.getItem("basket");
     return savedBasket ? JSON.parse(savedBasket) : [];
   });
 
-  // Save basket to localStorage 
+  // Save basket to localStorage
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
 
-  //function to clear basket
+  // Function to clear basket
   const clearBasket = () => {
     setBasket([]); 
     localStorage.removeItem("basket");
@@ -48,6 +47,7 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
+                
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/order">Order</Nav.Link>
                 <Nav.Link href="/basket">Basket</Nav.Link>
@@ -63,8 +63,9 @@ function App() {
 
         {/* Routes */}
         <Routes>
-          <Route path="/" element={<Content />} />
-          <Route path="/read" element={<Read />} />
+          <Route path="/" element={<Home />} />
+          
+         
           <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} />
           <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} clearBasket={clearBasket} />} />
           <Route path="/payment" element={<Payment basket={basket} clearBasket={clearBasket} />} />

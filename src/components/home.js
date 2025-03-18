@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom';
 import CybercafexImage from '../images/Cybercafex-image.jpg';
 import  mysteryRewardsImage  from '../images/mysteryRewards.jpg';
 import vrLoungeImage from '../images/vr.jpg';
@@ -8,7 +7,7 @@ import smartCoffeeMachineImage from '../images/smart-coffee-machine.jpg';
 import cyberpunkCafeImage from '../images/interior.jpg';
 import smartTableOrderingImage from '../images/smartTableOrdering.jpg';
 
-function Content() {
+function Home() {
     return (
         <div>
             {/* Hero Section with Background Image */}
@@ -18,11 +17,11 @@ function Content() {
             >
                 <div className="container">
                     <div className="row">
-                        <div className="hero-text col-xs-12 col-sm-6 col-md-6 col-lg-4 offset-lg-1">
-                            <h1 id="hero-h1">CyberCafeX</h1>
-                            <Link to="/read" className="btn btn-light" id="hero-button">
-                                Check Our Cafe
-                            </Link>
+                        <div className="fawas-text col-xs-12 col-sm-6 col-md-6 col-lg-4 offset-lg-1">
+                           
+                           
+                
+                            
                         </div>
                     </div>
                 </div>
@@ -135,4 +134,4 @@ function Content() {
     );
 }
 
-export default Content;
+export default Home;
