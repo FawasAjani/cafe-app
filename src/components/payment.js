@@ -47,7 +47,7 @@ function Payment({ basket, clearBasket }) {
         setExpiry("");//setEXpiry
         setCvv("");//setCvv
         setAddress("");//setAddress
-        setCity("");
+        setCity("");//SetCity
         setZipCode("");
         setCountry("");
 
