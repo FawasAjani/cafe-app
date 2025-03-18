@@ -66,8 +66,7 @@ function App() {
           <Route path="/" element={<Content />} />
           <Route path="/read" element={<Read />} />
           <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} />
-          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
-          <Route path="/payment" element={<Payment basket={basket} setBasket={setBasket} />} />
+          <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} clearBasket={clearBasket} />} />
           <Route path="/payment" element={<Payment basket={basket} clearBasket={clearBasket} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
