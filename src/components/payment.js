@@ -49,7 +49,7 @@ function Payment({ basket, clearBasket }) {
         setAddress("");//setAddress
         setCity("");//SetCity
         setZipCode("");//setZip
-        setCountry("");
+        setCountry("");//SetCountry
 
         setTimeout(() => {
             clearBasket(); //  Clear basket 
