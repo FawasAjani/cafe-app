@@ -19,16 +19,22 @@ import Logo from './images/cyber1logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  // ✅ Load basket from localStorage when app starts
+  //  Load basket from localStorage when app starts
   const [basket, setBasket] = useState(() => {
     const savedBasket = localStorage.getItem("basket");
     return savedBasket ? JSON.parse(savedBasket) : [];
   });
 
-  // ✅ Save basket to localStorage whenever it changes
+  // Save basket to localStorage 
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
+
+  //function to clear basket
+  const clearBasket = () => {
+    setBasket([]); 
+    localStorage.removeItem("basket");
+  };
 
   return (
     <Router>
@@ -62,6 +68,7 @@ function App() {
           <Route path="/order" element={<Order basket={basket} setBasket={setBasket} />} />
           <Route path="/basket" element={<Basket basket={basket} setBasket={setBasket} />} />
           <Route path="/payment" element={<Payment basket={basket} setBasket={setBasket} />} />
+          <Route path="/payment" element={<Payment basket={basket} clearBasket={clearBasket} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/edit/:id" element={<Edit />} />
