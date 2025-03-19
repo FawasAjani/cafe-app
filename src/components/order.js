@@ -50,10 +50,10 @@ const foodItems = [
 ];
 
 function Order({ basket, setBasket }) {
-  // ✅ Function to add items to the basket
+  //  Function to add items to the basket
   const addToBasket = (item) => {
-    console.log("Adding to basket:", item); // ✅ Debugging log
-    setBasket((prevBasket) => [...prevBasket, item]); // ✅ Correctly updates basket
+    console.log("Adding to basket:", item); // Adding to basket
+    setBasket((prevBasket) => [...prevBasket, item]); //updates basket
   };
 
   useEffect(() => {
