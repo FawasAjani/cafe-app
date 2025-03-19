@@ -57,7 +57,7 @@ function Order({ basket, setBasket }) {
   };
 
   useEffect(() => {
-    console.log("Updated Basket:", basket); // ✅ Debugging log
+    console.log("Updated Basket:", basket); // updated basket
   }, [basket]);
 
   return (
