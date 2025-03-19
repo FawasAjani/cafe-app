@@ -24,7 +24,7 @@ import waterImage from '../images/water.jpg';
 import sparklingwaterImage from '../images/sparkling-water.jpg';
 import fantaImage from '../images/fanta.jpg';
 
-// ✅ Full list of food items inside Order.js
+//  Full list of food items 
 const foodItems = [
   { id: 1, category: "Starters", name: "Cheesy Garlic Pitta", price: 6.25, image: garlicpittaImage },
   { id: 2, category: "Starters", name: "Olives", price: 5.25, image: olivesImage },
