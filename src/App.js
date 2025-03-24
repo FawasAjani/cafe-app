@@ -13,7 +13,7 @@ import Payment from './components/payment';
 import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
-import Menu from './components/menu';
+
 import Login from './components/login';
 import Signup from './components/Signup';
 import Logo from './images/cyber1logo.png';
@@ -93,7 +93,7 @@ function App() {
           <Route path="/payment" element={auth ? <Payment basket={basket} clearBasket={clearBasket} /> : <Navigate to="/payment" />} />
           <Route path="/review" element={auth ? <Review /> : <Navigate to="/review" />} />
           <Route path="/contact" element={auth ? <Contact /> : <Navigate to="/contact" />} />
-          <Route path="/menu" element={auth ? <Menu /> : <Navigate to="/menu" />} />
+          
           <Route path="/edit/:id" element={auth ? <Edit /> : <Navigate to="/edit" />} />
         </Routes>
 
