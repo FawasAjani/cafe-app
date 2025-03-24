@@ -1,74 +1,56 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 
 const app = express();
 const port = 4000;
+const SECRET_KEY = "your_secret_key";
 
-// Middleware
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// MongoDB Connection
-async function main() {
-    await mongoose.connect('mongodb+srv://Admin:Admin@cluster0.fu1gk.mongodb.net/DB11');
-    console.log('Connected to MongoDB');
-}
-main().catch(err => console.log(err));
+mongoose.connect('mongodb+srv://Admin:Admin@cluster0.fu1gk.mongodb.net/DB11')
+    .then(() => console.log("Connected to MongoDB"))
+    .catch(err => console.log(err));
 
-// Schema and Model
-const menuSchema = new mongoose.Schema({
-    name: String,
-    imageUrl: String, // ✅ Using image URL now
-    description: String,
-    category: String,
-    price: Number
+// User Schema (Updated to use 'email' instead of 'username')
+const userSchema = new mongoose.Schema({
+    email: { type: String, required: true, unique: true },  // 'email' is unique
+    password: { type: String, required: true }
 });
-const Menu = mongoose.model('Menu', menuSchema);
+const User = mongoose.model("User", userSchema);
 
-// Routes
-app.get('/', (req, res) => {
-    res.send('Welcome to CyberCafeX API!');
-});
+// Signup Route
+app.post("/api/signup", async (req, res) => {
+    const { email, password } = req.body;
 
-// Get All Menu Items
-app.get('/api/menu', async (req, res) => {
-    const menu = await Menu.find({});
-    res.json(menu);
-});
-
-// Get Single Item by ID
-app.get('/api/menu/:id', async (req, res) => {
-    const item = await Menu.findById(req.params.id);
-    res.json(item);
-});
-
-// Create New Menu Item
-app.post('/api/menu', async (req, res) => {
-    try {
-        const newItem = new Menu({
-            name: req.body.name,
-            imageUrl: req.body.imageUrl,  // 
-            description: req.body.description,
-            category: req.body.category,
-            price: req.body.price
-        });
-        await newItem.save();
-        res.status(201).json({ message: 'Menu item added successfully!' });
-    } catch (err) {
-        res.status(500).json({ message: 'Error adding menu item', error: err });
+    // Check if the email already exists in the database
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+        return res.status(400).json({ message: "Email is already taken" });
     }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new User({ email, password: hashedPassword });
+    await newUser.save();
+    res.status(201).json({ message: "User registered successfully" });
 });
 
-// Delete all menu items (for resetting the menu)
-app.delete('/api/menu/reset', async (req, res) => {
-    await Menu.deleteMany({});
-    res.json({ message: 'Menu has been reset!' });
+// Login Route
+app.post("/api/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user || !(await bcrypt.compare(password, user.password))) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    const token = jwt.sign({ email: user.email }, SECRET_KEY, { expiresIn: "1h" });
+    res.json({ token });
 });
 
-// Server Listening
-app.listen(port, () => {
-    console.log(`CyberCafeX API running on port ${port}`);
-});
+app.listen(port, () => console.log(`Server running on port ${port}`));
