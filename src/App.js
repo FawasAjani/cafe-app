@@ -87,7 +87,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
 
           {/* Protected Routes */}
-          <Route path="/" element={auth ? <Home /> : <Navigate to="/" />} />
+          <Route path="/" element={auth ? <Home /> : <Navigate to="/"/>} />
           <Route path="/order" element={auth ? <Order basket={basket} setBasket={setBasket} /> : <Navigate to="/order" />} />
           <Route path="/basket" element={auth ? <Basket basket={basket} setBasket={setBasket} clearBasket={clearBasket} /> : <Navigate to="/basket" />} />
           <Route path="/payment" element={auth ? <Payment basket={basket} clearBasket={clearBasket} /> : <Navigate to="/payment" />} />
