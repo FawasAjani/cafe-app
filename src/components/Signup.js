@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Signup = () => {
   const [email, setEmail] = useState("");//Email
   const [password, setPassword] = useState("");//password
-  const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+  const [message, setMessage] = useState("");//message
+  const navigate = useNavigate();//use to navigate to different pages
 
   const handleSignup = async (e) => {
     e.preventDefault();
