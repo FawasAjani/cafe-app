@@ -10,7 +10,6 @@ import Home from './components/home';
 import Order from './components/order';
 import Basket from './components/basket';
 import Payment from './components/payment';
-import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
 import Login from './components/login';
@@ -93,7 +92,7 @@ function App() {
           <Route path="/review" element={auth ? <Review /> : <Navigate to="/review" />} />
           <Route path="/contact" element={auth ? <Contact /> : <Navigate to="/contact" />} />
           
-          <Route path="/edit/:id" element={auth ? <Edit /> : <Navigate to="/edit" />} />
+       
         </Routes>
 
         {/* Footer */}

@@ -25,7 +25,7 @@ function Review() {
                 setMessage('Review submitted successfully!');
                 setName('');//customer name
                 setComment('');//comment
-                setRating(10);//rating
+                setRating(5);//rating
                 fetchReviews(); // Refresh the reviews
             })
             .catch(error => setMessage('Error submitting review: ' + error.message));
