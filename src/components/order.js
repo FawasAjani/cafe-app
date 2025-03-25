@@ -24,40 +24,40 @@ import waterImage from '../images/water.jpg';
 import sparklingwaterImage from '../images/sparkling-water.jpg';
 import fantaImage from '../images/fanta.jpg';
 
-//  Full list of food items 
+//  list of food items with calories and allergens
 const foodItems = [
-  { id: 1, category: "Starters", name: "Cheesy Garlic Pitta", price: 6.25, image: garlicpittaImage },
-  { id: 2, category: "Starters", name: "Olives", price: 5.25, image: olivesImage },
-  { id: 3, category: "Starters", name: "Sweet Potato", price: 8.00, image: sweetpotatoImage },
-  { id: 4, category: "Starters", name: "Halloumi Sticks & Dip", price: 9.60, image: halloumiImage },
-  { id: 5, category: "Starters", name: "Almonds", price: 1.90, image: almondsImage },
-  { id: 6, category: "Starters", name: "Ajani Mac & Cheese", price: 12.00, image: maccheeseImage },
-  { id: 7, category: "Main Dishes", name: "Classic Burger", price: 20.99, image: burgerImage },
-  { id: 8, category: "Main Dishes", name: "3 Chicken Wings", price: 24.00, image: chickenwingsImage },
-  { id: 9, category: "Main Dishes", name: "Chicken Livers & Portuguese Roll", price: 30.00, image: chickenliverImage },
-  { id: 10, category: "Main Dishes", name: "Chicken Breast Fillet", price: 24.00, image: chickenbreastImage },
-  { id: 11, category: "Main Dishes", name: "Double Chicken Wrap", price: 19.00, image: doublechickenwrapImage },
-  { id: 12, category: "Main Dishes", name: "Vegan Spicy Rice", price: 40.00, image: veganspicyriceImage },
-  { id: 13, category: "Sides", name: "Fully Loaded Chips", price: 9.00, image: fullyloadedchipsImage },
-  { id: 14, category: "Sides", name: "Macho Peas", price: 6.00, image: machoImage },
-  { id: 15, category: "Sides", name: "Garlic Bread", price: 5.00, image: garlicbreadImage },
-  { id: 16, category: "Desserts", name: "Chocolate Cake", price: 12.00, image: chocolatecakeImage },
-  { id: 17, category: "Desserts", name: "Cheese Cake", price: 7.00, image: cheesecakeImage },
-  { id: 18, category: "Desserts", name: "Chocolate Ice Cream", price: 14.40, image: chocolateicecreamImage },
-  { id: 19, category: "Drinks", name: "Water", price: 3.00, image: waterImage },
-  { id: 20, category: "Drinks", name: "Sparkling Water", price: 3.50, image: sparklingwaterImage },
-  { id: 21, category: "Drinks", name: "Fanta", price: 4.00, image: fantaImage },
+  { id: 1, category: "Starters", name: "Cheesy Garlic Pitta", price: 6.25, calories: 350, allergens: ["Dairy", "Gluten"], image: garlicpittaImage },
+  { id: 2, category: "Starters", name: "Olives", price: 5.25, calories: 100, allergens: ["None"], image: olivesImage },
+  { id: 3, category: "Starters", name: "Sweet Potato", price: 8.00, calories: 250, allergens: ["None"], image: sweetpotatoImage },
+  { id: 4, category: "Starters", name: "Halloumi Sticks & Dip", price: 9.60, calories: 400, allergens: ["Dairy"], image: halloumiImage },
+  { id: 5, category: "Starters", name: "Almonds", price: 1.90, calories: 200, allergens: ["Nuts"], image: almondsImage },
+  { id: 6, category: "Starters", name: "Ajani Mac & Cheese", price: 12.00, calories: 600, allergens: ["Dairy", "Gluten"], image: maccheeseImage },
+  { id: 7, category: "Main Dishes", name: "Classic Burger", price: 20.99, calories: 1750, allergens: ["Gluten", "Dairy"], image: burgerImage },
+  { id: 8, category: "Main Dishes", name: "3 Chicken Wings", price: 24.00, calories: 450, allergens: ["None"], image: chickenwingsImage },
+  { id: 9, category: "Main Dishes", name: "Chicken Livers & Portuguese Roll", price: 30.00, calories: 550, allergens: ["Gluten"], image: chickenliverImage },
+  { id: 10, category: "Main Dishes", name: "Chicken Breast Fillet", price: 24.00, calories: 300, allergens: ["None"], image: chickenbreastImage },
+  { id: 11, category: "Main Dishes", name: "Double Chicken Wrap", price: 19.00, calories: 680, allergens: ["Gluten"], image: doublechickenwrapImage },
+  { id: 12, category: "Main Dishes", name: "Vegan Spicy Rice", price: 40.00, calories: 450, allergens: ["None"], image: veganspicyriceImage },
+  { id: 13, category: "Sides", name: "Fully Loaded Chips", price: 9.00, calories: 500, allergens: ["None"], image: fullyloadedchipsImage },
+  { id: 14, category: "Sides", name: "Macho Peas", price: 6.00, calories: 250, allergens: ["None"], image: machoImage },
+  { id: 15, category: "Sides", name: "Garlic Bread", price: 5.00, calories: 330, allergens: ["Gluten", "Dairy"], image: garlicbreadImage },
+  { id: 16, category: "Desserts", name: "Chocolate Cake", price: 12.00, calories: 600, allergens: ["Gluten", "Dairy", "Eggs"], image: chocolatecakeImage },
+  { id: 17, category: "Desserts", name: "Cheese Cake", price: 7.00, calories: 450, allergens: ["Dairy", "Gluten"], image: cheesecakeImage },
+  { id: 18, category: "Desserts", name: "Chocolate Ice Cream", price: 14.40, calories: 320, allergens: ["Dairy"], image: chocolateicecreamImage },
+  { id: 19, category: "Drinks", name: "Water", price: 3.00, calories: 0, allergens: ["None"], image: waterImage },
+  { id: 20, category: "Drinks", name: "Sparkling Water", price: 3.50, calories: 0, allergens: ["None"], image: sparklingwaterImage },
+  { id: 21, category: "Drinks", name: "Fanta", price: 4.00, calories: 150, allergens: ["None"], image: fantaImage },
 ];
 
 function Order({ basket, setBasket }) {
-  //  Function to add items to the basket
+  // Function to add items to the basket
   const addToBasket = (item) => {
-    console.log("Adding to basket:", item); // Adding to basket
-    setBasket((prevBasket) => [...prevBasket, item]); //updates basket
+    console.log("Adding to basket:", item);
+    setBasket((prevBasket) => [...prevBasket, item]); // Updates basket
   };
 
   useEffect(() => {
-    console.log("Updated Basket:", basket); // updated basket
+    console.log("Updated Basket:", basket);
   }, [basket]);
 
   return (
@@ -73,7 +73,9 @@ function Order({ basket, setBasket }) {
                   <img src={item.image} className="card-img-top" alt={item.name} />
                   <div className="card-body">
                     <h5 className="card-title">{item.name}</h5>
-                    <p className="card-text">€{item.price.toFixed(2)}</p>
+                    <p className="card-text"><strong>Price:</strong> €{item.price.toFixed(2)}</p>
+                    <p className="card-text"><strong>Calories:</strong> {item.calories} kcal</p>
+                    <p className="card-text"><strong>Allergens:</strong> {item.allergens.join(", ")}</p>
                     <button className="btn btn-success" onClick={() => addToBasket(item)}>
                       Add to Basket
                     </button>
