@@ -24,7 +24,7 @@ function Review() {
             .then(() => {
                 setMessage('Review submitted successfully!');
                 setName('');//customer name
-                setComment('');
+                setComment('');//comment
                 setRating(5);
                 fetchReviews(); // Refresh the reviews
             })
