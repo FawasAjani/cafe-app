@@ -226,7 +226,7 @@ footer .contact-number:hover, footer .contact-email:hover {
   width: 200px;
 }
 
-
+/* Utility */
 .hidden {
   display: none;
 }
