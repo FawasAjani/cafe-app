@@ -77,7 +77,7 @@ app.post("/api/reviews", async (req, res) => {
         await newReview.save();
         res.status(201).json({ message: "Review submitted successfully" });
     } catch (error) {
-        res.status(500).json({ message: "Error submitting review" });
+        res.status(500).json({ message: "Error submitting review" });//Error submitting review
     }
 });
 
