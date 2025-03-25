@@ -84,10 +84,10 @@ function Home() {
                             Here’s how it works:
                             </p>
                             <ol>
-                            <li>Sign up through the CyberCafex app or website</li>
+                            <li>Sign up through the CyberCafex website</li>
                            <li>Earn 2 Cyber Points with each  purchase</li>
-                           <li>Collect 12 points to unlock a <strong>mystery reward</strong> — it could be a free coffee, a special discount, or an exclusive item!</li>
-                           <li>Reveal your reward with a tap in the app’s Mystery Rewards Hub</li>  
+                           <li>Collect 12 points to unlock a <strong>mystery reward</strong> — it could be a free meal or drink.</li>
+                           
                             </ol>
 
                         </div>
