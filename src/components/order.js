@@ -40,7 +40,7 @@ const foodItems = [
   { id: 12, category: "Main Dishes", name: "Vegan Spicy Rice", price: 40.00, calories: 450, allergens: ["None"], image: veganspicyriceImage },
   { id: 13, category: "Sides", name: "Fully Loaded Chips", price: 9.00, calories: 500, allergens: ["None"], image: fullyloadedchipsImage },
   { id: 14, category: "Sides", name: "Macho Peas", price: 6.00, calories: 250, allergens: ["None"], image: machoImage },
-  { id: 15, category: "Sides", name: "Garlic Bread", price: 5.00, calories: 330, allergens: ["Gluten", "Dairy"], image: garlicbreadImage },
+  { id: 15, category: "Sides", name: "Garlic Bread", price: 15.00, calories: 330, allergens: ["Gluten", "Dairy"], image: garlicbreadImage },
   { id: 16, category: "Desserts", name: "Chocolate Cake", price: 12.00, calories: 600, allergens: ["Gluten", "Dairy", "Eggs"], image: chocolatecakeImage },
   { id: 17, category: "Desserts", name: "Cheese Cake", price: 7.00, calories: 450, allergens: ["Dairy", "Gluten"], image: cheesecakeImage },
   { id: 18, category: "Desserts", name: "Chocolate Ice Cream", price: 14.40, calories: 320, allergens: ["Dairy"], image: chocolateicecreamImage },

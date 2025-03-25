@@ -87,7 +87,7 @@ function Home() {
                             </p>
                             <ol>
                             <li>Sign up through the CyberCafex app or website</li>
-                           <li>Earn 2 Cyber Points with each coffee purchase</li>
+                           <li>Earn 2 Cyber Points with each  purchase</li>
                            <li>Collect 12 points to unlock a <strong>mystery reward</strong> — it could be a free coffee, a special discount, or an exclusive item!</li>
                            <li>Reveal your reward with a tap in the app’s Mystery Rewards Hub</li>  
                             </ol>
@@ -106,17 +106,11 @@ function Home() {
                             <p>
                                Welcome to <strong>CyberCafeX</strong> — where coffee meets technology in a space designed for both productivity and relaxation. 
     Located in the heart of Galway, we combine the warmth of a traditional café with the convenience and innovation of a digital hub. 
-    Whether you're here for a quick coffee break, remote work, or socializing with friends, CyberCafeX offers a seamless experience like no other.
+ 
  </p>
  <p>
- Our expert baristas craft each cup using premium coffee beans carefully sourced from sustainable farms. With a passion for quality and flavor, 
-    we ensure every brew delivers a rich and satisfying taste. Our menu features a range of specialty coffees, signature drinks, and delicious 
-    food options.
-                            </p>
-                            <p>
                             At CyberCafeX, technology enhances every aspect of your visit. From smart table service and contactless ordering to high-speed Wi-Fi and 
-     digital environments, we've transforrmed the café experience for the modern world. Our loyalty program rewards you with every 
-    purchase, unlocking exclusive perks and surprises as you collect points through our app.
+     digital environments, we've transforrmed the café experience for the modern world.  Have menu suggestions? Email us at CYBERCAFEX@yahoo.com—we’d love to hear from you!
                             </p>
                         </article>
                         <div className="col-6 col-sm-3 about-column">
