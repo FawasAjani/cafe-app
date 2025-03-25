@@ -10,7 +10,7 @@ function Review() {
 
     // Fetch reviews from backend (if applicable)
     const fetchReviews = () => {
-        axios.get('http://localhost:4000/api/reviews')
+        axios.get('http://localhost:4000/api/reviews')//it runs on the server page
             .then(response => setReviews(response.data))
             .catch(error => console.error('Error fetching reviews:', error));
     };
@@ -23,7 +23,7 @@ function Review() {
         axios.post('http://localhost:4000/api/reviews', newReview)
             .then(() => {
                 setMessage('Review submitted successfully!');
-                setName('');
+                setName('');//customer name
                 setComment('');
                 setRating(5);
                 fetchReviews(); // Refresh the reviews
