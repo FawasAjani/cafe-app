@@ -19,9 +19,7 @@ function Home() {
                     <div className="row">
                         <div className="fawas-text col-xs-12 col-sm-6 col-md-6 col-lg-4 offset-lg-1">
                            
-                           
-                
-                            
+                                                                      
                         </div>
                     </div>
                 </div>
