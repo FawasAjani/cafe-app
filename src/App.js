@@ -13,7 +13,6 @@ import Payment from './components/payment';
 import Edit from './components/edit';
 import Contact from './components/contact';
 import Review from './components/review';
-
 import Login from './components/login';
 import Signup from './components/Signup';
 import Logo from './images/cyber1logo.png';
