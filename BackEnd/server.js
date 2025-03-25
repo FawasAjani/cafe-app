@@ -80,7 +80,7 @@ app.post("/api/reviews", async (req, res) => {
         res.status(500).json({ message: "Error submitting review" });//Error submitting review
     }
 });
-
+//Server running on port 4000
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
 
