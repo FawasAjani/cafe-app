@@ -38,8 +38,8 @@ function Home() {
                         </div>
                         <div className="col-12 col-sm-6">
                             <p>
-                                We're excited to introduce our new <strong>'Smart Table Service'</strong> at CyberCafeX in Westmeath!
-                                Simply scan the QR code at your table, explore our <strong>digital menu</strong>, place your order, and enjoy a seamless dining experience.
+                                We're excited to introduce our new <strong>'Smart Table Service'</strong> at CyberCafeX in Galway!
+                                Simply pay at your table, explore our <strong>digital menu</strong> and enjoy a seamless dining experience.
                             </p>
                         </div>
                     </div>
