@@ -6,6 +6,7 @@ import vrLoungeImage from '../images/vr.jpg';
 import smartCoffeeMachineImage from '../images/smart-coffee-machine.jpg';
 import cyberpunkCafeImage from '../images/interior.jpg';
 import smartTableOrderingImage from '../images/smartTableOrdering.jpg';
+//I used canva to generate the images.
 
 function Home() {
     return (
