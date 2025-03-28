@@ -11,7 +11,7 @@ import smartTableOrderingImage from '../images/smartTableOrdering.jpg';
 function Home() {
     return (
         <div>
-            {/* Hero Section with Background Image */}
+            {/* Section with Background Image */}
             <section 
                 className="Cybercafex-image container-fluid"
                 style={{ backgroundImage: `url(${CybercafexImage})` }}
@@ -69,7 +69,7 @@ function Home() {
                 </div>
             </div>
 
-            {/* Bean Rewards Program Section */}
+            {/*  Rewards Program Section */}
             <div className="custom-section white">
                 <div className="container">
                     <div className="row">
