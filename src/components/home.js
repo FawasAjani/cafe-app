@@ -45,7 +45,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
-
+              {/*Clicking on the icons doesn't do anything; they're just there for design.}
                 {/* Features Section with Icons */}
                 <div className="container">
                     <div className="row">
