@@ -64,9 +64,9 @@ function App() {
                     <Nav.Link href="/signup">Signup</Nav.Link>
                   </>
                 ) : (
-                  <>
+                  <>  {/*  naviagate to Homepage */}
                     <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/order">Order</Nav.Link>
+                    <Nav.Link href="/order">Menu</Nav.Link>
                     <Nav.Link href="/basket">Basket</Nav.Link>
                     <Nav.Link href="/payment">Payment</Nav.Link>
                     <Nav.Link href="/review">Review</Nav.Link>
