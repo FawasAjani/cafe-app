@@ -38,11 +38,11 @@ function Payment({ basket, clearBasket }) {
             return;
         }
 
-        // ✅ Save address details in localStorage (optional)
+        //  Save address details in localStorage (optional)
         localStorage.setItem("address", JSON.stringify({ address, city, zipCode, country }));
 
-        // ✅ Payment successful
-        setMessage("✅ Payment Successful! Thank you for your order, Enjoy your food.");
+        //  Payment successful
+        setMessage("✅ Payment Successful! Thank you for your order, Enjoy your food."); //added a tick emoji to the payment page
         setCardNumber("");//setCard
         setExpiry("");//setEXpiry
         setCvv("");//setCvv
