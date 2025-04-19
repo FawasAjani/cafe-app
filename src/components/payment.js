@@ -11,7 +11,7 @@ function Payment({ basket, clearBasket }) {
     const [country, setCountry] = useState("");
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
-
+// Calculate the total price of all items in the basket
     const totalPrice = basket.reduce((acc, item) => acc + item.price, 0);
 
     const handlePayment = (e) => {
