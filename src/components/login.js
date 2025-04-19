@@ -31,7 +31,7 @@ const Login = ({ setAuth }) => {
         setMessage(data.message);
       }
     } catch (error) {
-      setMessage("An error occurred. Please try again.");
+      setMessage("An error occurred. Please try again."); // This block catches any network errors during fetch
     }
   };
 
