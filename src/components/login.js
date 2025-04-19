@@ -6,6 +6,7 @@ const Login = ({ setAuth }) => {
   const [email, setEmail] = useState("");
     // useState  to store user's password input
   const [password, setPassword] = useState("");
+    // useState  to store and display any message 
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
