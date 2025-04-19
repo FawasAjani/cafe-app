@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import images directly in this file
@@ -50,10 +50,15 @@ const foodItems = [
 ];
 
 function Order({ basket, setBasket }) {
+  const [message, setMessage] = useState(""); // For showing success message
+
   // Function to add items to the basket
   const addToBasket = (item) => {
     console.log("Adding to basket:", item);
     setBasket((prevBasket) => [...prevBasket, item]); // Updates basket
+    //Displaying a message saying added to basket
+    setMessage(`${item.name} added to the basket`);
+    setTimeout(() => setMessage(""), 2500); // Remove message after 2.5s
   };
 
   useEffect(() => {
@@ -63,6 +68,13 @@ function Order({ basket, setBasket }) {
   return (
     <div className="container mt-4">
       <h2>Order Food</h2>
+
+      {message && (
+        <div className="alert alert-success text-center" role="alert">
+          {message}
+        </div>
+      )}
+
       {['Starters', 'Main Dishes', 'Sides', 'Desserts', 'Drinks'].map((category) => (
         <div key={category} className="mb-4">
           <h3>{category}</h3>
