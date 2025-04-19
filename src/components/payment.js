@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+// Functional component Payment 
 function Payment({ basket, clearBasket }) {
     const [cardNumber, setCardNumber] = useState("");
     const [expiry, setExpiry] = useState("");
