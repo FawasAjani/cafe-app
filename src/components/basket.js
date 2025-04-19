@@ -25,6 +25,7 @@ function Basket({ basket, setBasket }) {
       <div className="container">
         <h2>Your Basket</h2>
         {basket.length === 0 ? (
+          //It will display this message  when you don't add anything to your basket
           <p>Your basket is empty.</p>
         ) : (
           <>
