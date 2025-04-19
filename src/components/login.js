@@ -10,7 +10,7 @@ const Login = ({ setAuth }) => {
   const [message, setMessage] = useState("");
     // Hook to navigate between routes
   const navigate = useNavigate();
-
+// function to handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
 
