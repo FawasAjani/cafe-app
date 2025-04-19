@@ -12,6 +12,7 @@ const Login = ({ setAuth }) => {
   const navigate = useNavigate();
 // function to handle login form submission
   const handleLogin = async (e) => {
+     // Prevents the default form submissio
     e.preventDefault();
 
     try {
