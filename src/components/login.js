@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = ({ setAuth }) => {
    // useState to store user's email input
   const [email, setEmail] = useState("");
+    // useState  to store user's password input
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
