@@ -8,6 +8,7 @@ const Login = ({ setAuth }) => {
   const [password, setPassword] = useState("");
     // useState  to store and display any message 
   const [message, setMessage] = useState("");
+    // Hook to navigate between routes
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
