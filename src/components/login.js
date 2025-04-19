@@ -18,7 +18,7 @@ const Login = ({ setAuth }) => {
     try {
       const response = await fetch("http://localhost:4000/api/login", {
         method: "POST",// HTTP method for sending data to the server
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" },// // Tells the server we're sending JSON data
         body: JSON.stringify({ email, password }),
       });
 
