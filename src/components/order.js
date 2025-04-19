@@ -58,7 +58,7 @@ function Order({ basket, setBasket }) {
     setBasket((prevBasket) => [...prevBasket, item]); // Updates basket
     //Displaying a message saying added to basket
     setMessage(`${item.name} added to the basket`);
-    setTimeout(() => setMessage(""), 2500); // Remove message after 2.5s
+    setTimeout(() => setMessage(""), 2500); //Message dissapers aftert 2.5 seconds
   };
 
   useEffect(() => {
